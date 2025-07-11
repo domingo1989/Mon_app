@@ -2,7 +2,7 @@ name: Build Flutter APK
 
 on:
   push:
-    branches: [main]  # ou "master" selon ta branche
+    branches: [main]  # ou "master" selon ton dépôt
   pull_request:
     branches: [main]
 
@@ -17,7 +17,7 @@ jobs:
       - name: 🐦 Installer Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.13.0'
+          flutter-version: '3.22.2'  # ✅ Compatible avec Dart >=3.3.4
 
       - name: 📦 Installer les dépendances
         run: flutter pub get
