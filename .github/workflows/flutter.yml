@@ -2,7 +2,7 @@ name: Build Flutter APK
 
 on:
   push:
-    branches: [main]  # remplace par "master" si ta branche s'appelle ainsi
+    branches: [main]  # ou "master" selon ta branche
   pull_request:
     branches: [main]
 
@@ -26,7 +26,7 @@ jobs:
         run: flutter build apk --release
 
       - name: 📤 Uploader l'APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: MonApp-APK
           path: build/app/outputs/flutter-apk/app-release.apk
